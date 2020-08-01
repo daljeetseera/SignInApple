@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F58BD2FE965052295C8CD4A /* Pods_AppleSignIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 775CB6B4BD0EA148375602E5 /* Pods_AppleSignIn.framework */; };
 		85AF84E624D427BC0020F176 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AF84E524D427BC0020F176 /* AppDelegate.swift */; };
 		85AF84E824D427BC0020F176 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AF84E724D427BC0020F176 /* SceneDelegate.swift */; };
 		85AF84EB24D427BC0020F176 /* AppleSignIn.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 85AF84E924D427BC0020F176 /* AppleSignIn.xcdatamodeld */; };
@@ -14,9 +15,17 @@
 		85AF84EF24D427BE0020F176 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85AF84EE24D427BE0020F176 /* Assets.xcassets */; };
 		85AF84F224D427BE0020F176 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85AF84F124D427BE0020F176 /* Preview Assets.xcassets */; };
 		85AF84F524D427BE0020F176 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85AF84F324D427BE0020F176 /* LaunchScreen.storyboard */; };
+		85AF84FE24D429E80020F176 /* AppleSignInSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AF84FD24D429E80020F176 /* AppleSignInSwift.swift */; };
+		85AF850924D452DE0020F176 /* AppleSignInDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AF850824D452DE0020F176 /* AppleSignInDelegate.swift */; };
+		85AF850B24D453E20020F176 /* WebApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AF850A24D453E20020F176 /* WebApi.swift */; };
+		85AF850D24D462F00020F176 /* EnvironmentWindowKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AF850C24D462EF0020F176 /* EnvironmentWindowKey.swift */; };
+		85AF850F24D483170020F176 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AF850E24D483170020F176 /* SecondView.swift */; };
+		85C855FA24D5B28C00FEFBF0 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C855F924D5B28C00FEFBF0 /* KeychainWrapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		60DB23AC285FCEB3C339B643 /* Pods-AppleSignIn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppleSignIn.debug.xcconfig"; path = "Target Support Files/Pods-AppleSignIn/Pods-AppleSignIn.debug.xcconfig"; sourceTree = "<group>"; };
+		775CB6B4BD0EA148375602E5 /* Pods_AppleSignIn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppleSignIn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		85AF84E224D427BC0020F176 /* AppleSignIn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleSignIn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85AF84E524D427BC0020F176 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85AF84E724D427BC0020F176 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +35,14 @@
 		85AF84F124D427BE0020F176 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		85AF84F424D427BE0020F176 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		85AF84F624D427BE0020F176 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85AF84FC24D427E20020F176 /* AppleSignIn.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppleSignIn.entitlements; sourceTree = "<group>"; };
+		85AF84FD24D429E80020F176 /* AppleSignInSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSignInSwift.swift; sourceTree = "<group>"; };
+		85AF850824D452DE0020F176 /* AppleSignInDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSignInDelegate.swift; sourceTree = "<group>"; };
+		85AF850A24D453E20020F176 /* WebApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebApi.swift; sourceTree = "<group>"; };
+		85AF850C24D462EF0020F176 /* EnvironmentWindowKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentWindowKey.swift; sourceTree = "<group>"; };
+		85AF850E24D483170020F176 /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
+		85C855F924D5B28C00FEFBF0 /* KeychainWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
+		C8EB0A75ACEDC91B10A616F2 /* Pods-AppleSignIn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppleSignIn.release.xcconfig"; path = "Target Support Files/Pods-AppleSignIn/Pods-AppleSignIn.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +50,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F58BD2FE965052295C8CD4A /* Pods_AppleSignIn.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		123A7A56CCA2817DA406BACE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				775CB6B4BD0EA148375602E5 /* Pods_AppleSignIn.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		85AF84D924D427BC0020F176 = {
 			isa = PBXGroup;
 			children = (
 				85AF84E424D427BC0020F176 /* AppleSignIn */,
 				85AF84E324D427BC0020F176 /* Products */,
+				E4CF92FA39444F6311A53D98 /* Pods */,
+				123A7A56CCA2817DA406BACE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,9 +86,16 @@
 		85AF84E424D427BC0020F176 /* AppleSignIn */ = {
 			isa = PBXGroup;
 			children = (
+				85AF84FF24D44D470020F176 /* KeyChain */,
+				85AF84FC24D427E20020F176 /* AppleSignIn.entitlements */,
 				85AF84E524D427BC0020F176 /* AppDelegate.swift */,
 				85AF84E724D427BC0020F176 /* SceneDelegate.swift */,
 				85AF84EC24D427BC0020F176 /* ContentView.swift */,
+				85AF850E24D483170020F176 /* SecondView.swift */,
+				85AF84FD24D429E80020F176 /* AppleSignInSwift.swift */,
+				85AF850824D452DE0020F176 /* AppleSignInDelegate.swift */,
+				85AF850A24D453E20020F176 /* WebApi.swift */,
+				85AF850C24D462EF0020F176 /* EnvironmentWindowKey.swift */,
 				85AF84EE24D427BE0020F176 /* Assets.xcassets */,
 				85AF84F324D427BE0020F176 /* LaunchScreen.storyboard */,
 				85AF84F624D427BE0020F176 /* Info.plist */,
@@ -78,6 +113,23 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		85AF84FF24D44D470020F176 /* KeyChain */ = {
+			isa = PBXGroup;
+			children = (
+				85C855F924D5B28C00FEFBF0 /* KeychainWrapper.swift */,
+			);
+			path = KeyChain;
+			sourceTree = "<group>";
+		};
+		E4CF92FA39444F6311A53D98 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				60DB23AC285FCEB3C339B643 /* Pods-AppleSignIn.debug.xcconfig */,
+				C8EB0A75ACEDC91B10A616F2 /* Pods-AppleSignIn.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -85,9 +137,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 85AF84F924D427BE0020F176 /* Build configuration list for PBXNativeTarget "AppleSignIn" */;
 			buildPhases = (
+				53655593AF5C22F67BEE8D9B /* [CP] Check Pods Manifest.lock */,
 				85AF84DE24D427BC0020F176 /* Sources */,
 				85AF84DF24D427BC0020F176 /* Frameworks */,
 				85AF84E024D427BC0020F176 /* Resources */,
+				11E4304D9AB861E59E638679 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -144,6 +198,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		11E4304D9AB861E59E638679 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AppleSignIn/Pods-AppleSignIn-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AppleSignIn/Pods-AppleSignIn-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AppleSignIn/Pods-AppleSignIn-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		53655593AF5C22F67BEE8D9B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AppleSignIn-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		85AF84DE24D427BC0020F176 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -151,8 +247,14 @@
 			files = (
 				85AF84E624D427BC0020F176 /* AppDelegate.swift in Sources */,
 				85AF84EB24D427BC0020F176 /* AppleSignIn.xcdatamodeld in Sources */,
+				85C855FA24D5B28C00FEFBF0 /* KeychainWrapper.swift in Sources */,
 				85AF84ED24D427BC0020F176 /* ContentView.swift in Sources */,
 				85AF84E824D427BC0020F176 /* SceneDelegate.swift in Sources */,
+				85AF850B24D453E20020F176 /* WebApi.swift in Sources */,
+				85AF850924D452DE0020F176 /* AppleSignInDelegate.swift in Sources */,
+				85AF84FE24D429E80020F176 /* AppleSignInSwift.swift in Sources */,
+				85AF850F24D483170020F176 /* SecondView.swift in Sources */,
+				85AF850D24D462F00020F176 /* EnvironmentWindowKey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,18 +388,25 @@
 		};
 		85AF84FA24D427BE0020F176 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60DB23AC285FCEB3C339B643 /* Pods-AppleSignIn.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = AppleSignIn/AppleSignIn.entitlements;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 2.0;
 				DEVELOPMENT_ASSET_PATHS = "\"AppleSignIn/Preview Content\"";
+				DEVELOPMENT_TEAM = 5A7WG534AQ;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = AppleSignIn/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.daljeetsingh.AppleSignIn;
+				MARKETING_VERSION = 3.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.beckettmedia.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = BeckettMobileJuly2020DevelopmentProfile;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -305,18 +414,25 @@
 		};
 		85AF84FB24D427BE0020F176 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8EB0A75ACEDC91B10A616F2 /* Pods-AppleSignIn.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = AppleSignIn/AppleSignIn.entitlements;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 2.0;
 				DEVELOPMENT_ASSET_PATHS = "\"AppleSignIn/Preview Content\"";
+				DEVELOPMENT_TEAM = 5A7WG534AQ;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = AppleSignIn/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.daljeetsingh.AppleSignIn;
+				MARKETING_VERSION = 3.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.beckettmedia.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = BeckettMobileJuly2020DevelopmentProfile;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

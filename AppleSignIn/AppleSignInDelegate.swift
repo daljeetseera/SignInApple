@@ -7,3 +7,82 @@
 //
 
 import Foundation
+import AuthenticationServices
+import Contacts
+
+final class AppleSignInDelegate: NSObject {
+    
+    private let signInSucceeded: (Bool) -> Void
+    private weak var window: UIWindow!
+    
+    init(window: UIWindow?, onSignedIn: @escaping (Bool) -> Void) {
+        self.window = window
+        self.signInSucceeded = onSignedIn
+    }
+    
+}
+
+extension AppleSignInDelegate: ASAuthorizationControllerDelegate {
+    
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
+        
+        switch authorization.credential {
+        case let cred as ASAuthorizationAppleIDCredential:
+            if let _ = cred.email, let _ = cred.fullName {
+                registration(credentials: cred)
+            } else {
+                signInWithExistingAccount(credential: cred)
+            }
+            
+        case let passCred as ASPasswordCredential:
+            signInWithUserAndPassword(credential: passCred)
+            
+        default:
+            break
+        }
+    }
+    
+    private func signInWithExistingAccount(credential: ASAuthorizationAppleIDCredential) {
+        // You *should* have a fully registered account here.  If you get back an error from your server
+        // that the account doesn't exist, you can look in the keychain for the credentials and rerun setup
+        
+        // if (WebAPI.Login(credential.user, credential.identityToken, credential.authorizationCode)) {
+        //   ...
+        // }
+        self.signInSucceeded(true)
+    }
+    
+    private func signInWithUserAndPassword(credential: ASPasswordCredential) {
+        // You *should* have a fully registered account here.  If you get back an error from your server
+        // that the account doesn't exist, you can look in the keychain for the credentials and rerun setup
+        
+        // if (WebAPI.Login(credential.user, credential.password)) {
+        //   ...
+        // }
+        self.signInSucceeded(true)
+    }
+    
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error)
+    {
+        print("error \(error.localizedDescription)")
+    }
+    
+    func registration(credentials: ASAuthorizationAppleIDCredential){
+        
+        let emailSuccess = keychainWrapper.shared.setValueWithResponse(key: "email", value: credentials.email!)
+        let userSuccess = keychainWrapper.shared.setValueWithResponse(key: "user", value: credentials.user)
+        let name = (credentials.fullName?.givenName ?? "") + (credentials.fullName?.familyName ?? "")
+        let _ = keychainWrapper.shared.setValueWithResponse(key: "name", value: name)
+        
+        if emailSuccess && userSuccess  {
+            print("Sign In Successfully")
+            signInSucceeded(emailSuccess)
+        }
+    }
+}
+
+extension AppleSignInDelegate: ASAuthorizationControllerPresentationContextProviding {
+  func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
+    return self.window
+  }
+}
