@@ -27,7 +27,7 @@ extension AppleSignInDelegate: ASAuthorizationControllerDelegate {
         
         switch authorization.credential {
         case let cred as ASAuthorizationAppleIDCredential:
-            if let _ = cred.email, let _ = cred.fullName {
+            if cred.email != nil, cred.fullName != nil {
                 registration(credentials: cred)
             } else {
                 signInWithExistingAccount(credential: cred)
@@ -48,19 +48,18 @@ extension AppleSignInDelegate: ASAuthorizationControllerDelegate {
         self.signInSucceeded(true)
     }
     
-    func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error)
-    {
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
         print("error \(error.localizedDescription)")
     }
     
-    func registration(credentials: ASAuthorizationAppleIDCredential){
+    func registration(credentials: ASAuthorizationAppleIDCredential) {
         
         let emailSuccess = KeychainWrapper.shared.set(key: "email", value: credentials.email!)
         let userSuccess = KeychainWrapper.shared.set(key: "user", value: credentials.user)
         let name = (credentials.fullName?.givenName ?? "") + (credentials.fullName?.familyName ?? "")
         KeychainWrapper.shared.set(key: "name", value: name)
         
-        if emailSuccess, userSuccess  {
+        if emailSuccess, userSuccess {
             print("Sign In Successfully")
             signInSucceeded(emailSuccess)
         }

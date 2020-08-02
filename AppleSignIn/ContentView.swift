@@ -45,25 +45,21 @@ struct ContentView: View {
             if identifier.isEmpty {
                 return
             }
-            appleIDProvider.getCredentialState(forUserID: identifier) { (credential, error) in
+            appleIDProvider.getCredentialState(forUserID: identifier) { (credential, _) in
                 
                 switch credential {
                 case .authorized:
                     print("authorized for sign in")
                     self.actionState = 1
-                    break
                 case .notFound:
                     print("Access Not found")
                     self.performExistingAccountSetupFlows()
-                    break
                 case .revoked:
                     print("Access revoked")
                     KeychainWrapper.shared.clearKeychain()
-                    break
                 case .transferred:
                     print("Access Transferred")
                     KeychainWrapper.shared.clearKeychain()
-                    break
                 default:
                     print("Apple sign in credential state unidentified")
                 }
@@ -108,7 +104,6 @@ struct ContentView: View {
         controller.performRequests()
     }
 }
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

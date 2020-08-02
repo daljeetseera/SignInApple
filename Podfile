@@ -6,7 +6,6 @@ target 'AppleSignIn' do
   use_frameworks!
 
   # Pods for AppleSignIn
-	pod 'KeychainSwift', '~> 19.0'
+	pod 'KeychainSwift', '~> 19.0'	
 	pod 'SwiftLint'
-
 end

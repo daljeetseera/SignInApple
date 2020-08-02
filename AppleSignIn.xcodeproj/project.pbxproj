@@ -20,6 +20,7 @@
 		85AF850D24D462F00020F176 /* EnvironmentWindowKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AF850C24D462EF0020F176 /* EnvironmentWindowKey.swift */; };
 		85AF850F24D483170020F176 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AF850E24D483170020F176 /* SecondView.swift */; };
 		85C855FA24D5B28C00FEFBF0 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C855F924D5B28C00FEFBF0 /* KeychainWrapper.swift */; };
+		85D81C4524D7045500735F22 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 85D81C4424D7045500735F22 /* .swiftlint.yml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		85AF850C24D462EF0020F176 /* EnvironmentWindowKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentWindowKey.swift; sourceTree = "<group>"; };
 		85AF850E24D483170020F176 /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
 		85C855F924D5B28C00FEFBF0 /* KeychainWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
+		85D81C4424D7045500735F22 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		C8EB0A75ACEDC91B10A616F2 /* Pods-AppleSignIn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppleSignIn.release.xcconfig"; path = "Target Support Files/Pods-AppleSignIn/Pods-AppleSignIn.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,6 +68,7 @@
 		85AF84D924D427BC0020F176 = {
 			isa = PBXGroup;
 			children = (
+				85D81C4424D7045500735F22 /* .swiftlint.yml */,
 				85AF84E424D427BC0020F176 /* AppleSignIn */,
 				85AF84E324D427BC0020F176 /* Products */,
 				E4CF92FA39444F6311A53D98 /* Pods */,
@@ -188,6 +191,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85D81C4524D7045500735F22 /* .swiftlint.yml in Resources */,
 				85AF84F524D427BE0020F176 /* LaunchScreen.storyboard in Resources */,
 				85AF84F224D427BE0020F176 /* Preview Assets.xcassets in Resources */,
 				85AF84EF24D427BE0020F176 /* Assets.xcassets in Resources */,

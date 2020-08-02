@@ -15,11 +15,9 @@ final class AppleSignInSwift: UIViewRepresentable {
     func updateUIView(_ uiView: ASAuthorizationAppleIDButton, context: UIViewRepresentableContext<AppleSignInSwift>) {
     }
     
-    func makeUIView(context: Context)-> ASAuthorizationAppleIDButton {
+    func makeUIView(context: Context) -> ASAuthorizationAppleIDButton {
         
         let button = ASAuthorizationAppleIDButton(authorizationButtonType: .signIn, authorizationButtonStyle: .black)
         return button
     }
-    
 }
-
