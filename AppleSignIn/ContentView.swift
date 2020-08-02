@@ -52,7 +52,7 @@ struct ContentView: View {
             }
             
             print(" identifier \(identifier)")
-            appleIDProvider.getCredentialState(forUserID: identifier) { (credential, error) in
+            appleIDProvider.getCredentialState(forUserID: "12344545") { (credential, error) in
                 
                 switch credential {
                 case .authorized:
@@ -69,6 +69,7 @@ struct ContentView: View {
                     break
                 case .transferred:
                     print("Access Transferred")
+                    KeychainWrapper.shared.clearKeychain()
                     break
                 default:
                     print("Apple sign in credential state unidentified")

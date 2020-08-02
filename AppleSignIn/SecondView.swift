@@ -15,12 +15,13 @@ struct SecondView: View {
     var body: some View {
         
         NavigationView {
-            VStack(alignment: .center, spacing: 100) {
-                Text("You are logged In")
+            VStack(alignment: .center, spacing: 200) {
+                Text("You are logged In").bold()
                 Button(action: {
                     self.logout()
                     self.presentationMode.wrappedValue.dismiss()
                 }) {
+                
                     Text("Logout").bold()
                 }
             }
