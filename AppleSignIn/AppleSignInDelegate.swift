@@ -69,12 +69,12 @@ extension AppleSignInDelegate: ASAuthorizationControllerDelegate {
     
     func registration(credentials: ASAuthorizationAppleIDCredential){
         
-        let emailSuccess = keychainWrapper.shared.setValueWithResponse(key: "email", value: credentials.email!)
-        let userSuccess = keychainWrapper.shared.setValueWithResponse(key: "user", value: credentials.user)
+        let emailSuccess = KeychainWrapper.shared.set(key: "email", value: credentials.email!)
+        let userSuccess = KeychainWrapper.shared.set(key: "user", value: credentials.user)
         let name = (credentials.fullName?.givenName ?? "") + (credentials.fullName?.familyName ?? "")
-        let _ = keychainWrapper.shared.setValueWithResponse(key: "name", value: name)
+        KeychainWrapper.shared.set(key: "name", value: name)
         
-        if emailSuccess && userSuccess  {
+        if emailSuccess, userSuccess  {
             print("Sign In Successfully")
             signInSucceeded(emailSuccess)
         }

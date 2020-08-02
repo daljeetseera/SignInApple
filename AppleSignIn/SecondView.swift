@@ -30,14 +30,7 @@ struct SecondView: View {
     }
  
     func logout() {
-        let keychain = UserDataKeychain()
-        
-        do {
-            try keychain.remove()
-        }
-        catch {
-           print("Unable to reset keychain")
-        }
+    
     }
 }
 

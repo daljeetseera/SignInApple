@@ -9,33 +9,36 @@
 import Foundation
 import KeychainSwift
 
-struct keychainWrapper {
+struct KeychainWrapper {
     
-    static let shared = keychainWrapper()
+    static let shared = KeychainWrapper()
     
     let keychain = KeychainSwift()
     func store(key: String, value: String) {
-        
         keychain.set(value, forKey: key)
     }
     
-    func getValue(key: String)-> String {
-        return  keychain.get(key) ?? ""
+    func getValueFor(key: String)-> String {
+        return keychain.get(key) ?? ""
     }
     
-    func getAllKeys()-> [String] {
+    func getAllKeys() -> [String] {
           return keychain.allKeys
        }
     
-    func removeKey(key: String) {
+    func remove(key: String) {
         keychain.delete(key) // Remove single key
+    }
+    
+    func clearKeychain() {
         keychain.clear()
     }
     
-    func setValueWithResponse(key: String, value: String)-> Bool{
+    @discardableResult
+    func set(key: String, value: String) -> Bool {
         if keychain.set(value, forKey: key) {
-          return true
+            return true
         }
-          return false
+        return false
     }
 }

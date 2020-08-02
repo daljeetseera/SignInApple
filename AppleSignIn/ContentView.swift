@@ -45,7 +45,7 @@ struct ContentView: View {
             
             let appleIDProvider = ASAuthorizationAppleIDProvider()
             
-            let identifier = keychainWrapper.shared.getValue(key: "user")
+            let identifier = KeychainWrapper.shared.getValueFor(key: "user")
             
             print(" identifier \(identifier)")
             appleIDProvider.getCredentialState(forUserID: identifier) { (credential, error) in
@@ -57,7 +57,7 @@ struct ContentView: View {
                     break
                 case .notFound:
                     print("Access Not found")
-                    self.performExistingAccountSetupFlows()
+            self.performExistingAccountSetupFlows()
                     break
                 case .revoked:
                     print("Access revoked")

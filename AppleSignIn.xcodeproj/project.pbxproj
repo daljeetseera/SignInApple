@@ -17,7 +17,6 @@
 		85AF84F524D427BE0020F176 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85AF84F324D427BE0020F176 /* LaunchScreen.storyboard */; };
 		85AF84FE24D429E80020F176 /* AppleSignInSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AF84FD24D429E80020F176 /* AppleSignInSwift.swift */; };
 		85AF850924D452DE0020F176 /* AppleSignInDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AF850824D452DE0020F176 /* AppleSignInDelegate.swift */; };
-		85AF850B24D453E20020F176 /* WebApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AF850A24D453E20020F176 /* WebApi.swift */; };
 		85AF850D24D462F00020F176 /* EnvironmentWindowKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AF850C24D462EF0020F176 /* EnvironmentWindowKey.swift */; };
 		85AF850F24D483170020F176 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AF850E24D483170020F176 /* SecondView.swift */; };
 		85C855FA24D5B28C00FEFBF0 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C855F924D5B28C00FEFBF0 /* KeychainWrapper.swift */; };
@@ -38,7 +37,6 @@
 		85AF84FC24D427E20020F176 /* AppleSignIn.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppleSignIn.entitlements; sourceTree = "<group>"; };
 		85AF84FD24D429E80020F176 /* AppleSignInSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSignInSwift.swift; sourceTree = "<group>"; };
 		85AF850824D452DE0020F176 /* AppleSignInDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSignInDelegate.swift; sourceTree = "<group>"; };
-		85AF850A24D453E20020F176 /* WebApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebApi.swift; sourceTree = "<group>"; };
 		85AF850C24D462EF0020F176 /* EnvironmentWindowKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentWindowKey.swift; sourceTree = "<group>"; };
 		85AF850E24D483170020F176 /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
 		85C855F924D5B28C00FEFBF0 /* KeychainWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
@@ -94,7 +92,6 @@
 				85AF850E24D483170020F176 /* SecondView.swift */,
 				85AF84FD24D429E80020F176 /* AppleSignInSwift.swift */,
 				85AF850824D452DE0020F176 /* AppleSignInDelegate.swift */,
-				85AF850A24D453E20020F176 /* WebApi.swift */,
 				85AF850C24D462EF0020F176 /* EnvironmentWindowKey.swift */,
 				85AF84EE24D427BE0020F176 /* Assets.xcassets */,
 				85AF84F324D427BE0020F176 /* LaunchScreen.storyboard */,
@@ -250,7 +247,6 @@
 				85C855FA24D5B28C00FEFBF0 /* KeychainWrapper.swift in Sources */,
 				85AF84ED24D427BC0020F176 /* ContentView.swift in Sources */,
 				85AF84E824D427BC0020F176 /* SceneDelegate.swift in Sources */,
-				85AF850B24D453E20020F176 /* WebApi.swift in Sources */,
 				85AF850924D452DE0020F176 /* AppleSignInDelegate.swift in Sources */,
 				85AF84FE24D429E80020F176 /* AppleSignInSwift.swift in Sources */,
 				85AF850F24D483170020F176 /* SecondView.swift in Sources */,
