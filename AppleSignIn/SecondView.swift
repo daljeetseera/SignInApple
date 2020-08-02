@@ -16,22 +16,31 @@ struct SecondView: View {
         
         NavigationView {
             VStack(alignment: .center, spacing: 200) {
-                Text("You are logged In").bold()
+                Text("You are logged In").font(.largeTitle)
                 Button(action: {
                     self.logout()
-                    self.presentationMode.wrappedValue.dismiss()
+                    
                 }) {
-                
-                    Text("Logout").bold()
+                    Text("Logout").fontWeight(.medium)
+                        .font(.body)
+                        .padding()
+                        .background(Color.black)
+                        .cornerRadius(10)
+                        .foregroundColor(.white)
+                        .padding(5)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.black, lineWidth: 5))
                 }
             }
         }
         .navigationBarTitle("Home", displayMode: .large)
-         .navigationBarBackButtonHidden(true)
+        .navigationBarBackButtonHidden(true)
     }
- 
-    func logout() {
     
+    func logout() {
+        // Handle your session token here
+        self.presentationMode.wrappedValue.dismiss()
     }
 }
 

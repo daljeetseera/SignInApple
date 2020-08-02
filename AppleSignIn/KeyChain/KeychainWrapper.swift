@@ -10,7 +10,7 @@ import Foundation
 import KeychainSwift
 
 struct KeychainWrapper {
-    
+
     static let shared = KeychainWrapper()
     
     let keychain = KeychainSwift()
@@ -18,13 +18,13 @@ struct KeychainWrapper {
         keychain.set(value, forKey: key)
     }
     
-    func getValueFor(key: String)-> String {
+    func getValueFor(key: String) -> String {
         return keychain.get(key) ?? ""
     }
     
     func getAllKeys() -> [String] {
-          return keychain.allKeys
-       }
+        return keychain.allKeys
+    }
     
     func remove(key: String) {
         keychain.delete(key) // Remove single key

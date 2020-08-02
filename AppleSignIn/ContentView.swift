@@ -17,23 +17,18 @@ struct ContentView: View {
     @State var showsAlert = false
     @State private var actionState: Int? = 0
     
-    
     var body: some View {
         
         NavigationView {
             VStack {
-                AppleSignInSwift().frame(width: 330, height: 50).onTapGesture {
-                    self.SignInTapped()
-                } .alert(isPresented: $showsAlert) {
-                    Alert(title: Text("Unable to login"), message: Text("You might have changed your apple id."), dismissButton: .default(Text("Okay")))
+                AppleSignInSwift().frame(width: 330, height: 50, alignment: .center).onTapGesture {
+                    self.signInTapped()
                 }
                 NavigationLink(destination: SecondView(), tag: 1, selection: $actionState) {
                     Text("")
                 }
-                    
                 .onAppear {
                     self.checkAuthorizationState()
-                    
                 }
             }
         }
@@ -50,9 +45,7 @@ struct ContentView: View {
             if identifier.isEmpty {
                 return
             }
-            
-            print(" identifier \(identifier)")
-            appleIDProvider.getCredentialState(forUserID: "12344545") { (credential, error) in
+            appleIDProvider.getCredentialState(forUserID: identifier) { (credential, error) in
                 
                 switch credential {
                 case .authorized:
@@ -78,13 +71,10 @@ struct ContentView: View {
         }
     }
     
-    func SignInTapped() {
-        
+    func signInTapped() {
         let request = ASAuthorizationAppleIDProvider().createRequest()
         request.requestedScopes = [.fullName, .email]
-        
         performSignIn(using: [request])
-        
     }
     /// Prompts the user if an existing iCloud Keychain credential or Apple ID credential is found.
     private func performExistingAccountSetupFlows() {
@@ -95,7 +85,6 @@ struct ContentView: View {
             ASAuthorizationAppleIDProvider().createRequest(),
             ASAuthorizationPasswordProvider().createRequest()
         ]
-        
         performSignIn(using: requests)
         #endif
     }

@@ -7,5 +7,6 @@ target 'AppleSignIn' do
 
   # Pods for AppleSignIn
 	pod 'KeychainSwift', '~> 19.0'
+	pod 'SwiftLint'
 
 end
