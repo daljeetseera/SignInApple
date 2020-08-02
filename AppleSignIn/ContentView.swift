@@ -32,20 +32,24 @@ struct ContentView: View {
                 }
                     
                 .onAppear {
-                    self.checkState()
+                    self.checkAuthorizationState()
                     
                 }
             }
         }
     }
     
-    func checkState() {
+    func checkAuthorizationState() {
         
         if #available(tvOS 13.0, *) {
             
             let appleIDProvider = ASAuthorizationAppleIDProvider()
             
             let identifier = KeychainWrapper.shared.getValueFor(key: "user")
+            
+            if identifier.isEmpty {
+                return
+            }
             
             print(" identifier \(identifier)")
             appleIDProvider.getCredentialState(forUserID: identifier) { (credential, error) in
@@ -57,24 +61,20 @@ struct ContentView: View {
                     break
                 case .notFound:
                     print("Access Not found")
-            self.performExistingAccountSetupFlows()
+                    self.performExistingAccountSetupFlows()
                     break
                 case .revoked:
                     print("Access revoked")
-                    self.showsAlert = true
+                    KeychainWrapper.shared.clearKeychain()
                     break
                 case .transferred:
                     print("Access Transferred")
                     break
                 default:
                     print("Apple sign in credential state unidentified")
-                    
                 }
             }
-            
-            
         }
-        
     }
     
     func SignInTapped() {

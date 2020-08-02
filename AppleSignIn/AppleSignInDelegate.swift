@@ -19,7 +19,6 @@ final class AppleSignInDelegate: NSObject {
         self.window = window
         self.signInSucceeded = onSignedIn
     }
-    
 }
 
 extension AppleSignInDelegate: ASAuthorizationControllerDelegate {
@@ -34,9 +33,6 @@ extension AppleSignInDelegate: ASAuthorizationControllerDelegate {
                 signInWithExistingAccount(credential: cred)
             }
             
-        case let passCred as ASPasswordCredential:
-            signInWithUserAndPassword(credential: passCred)
-            
         default:
             break
         }
@@ -47,16 +43,6 @@ extension AppleSignInDelegate: ASAuthorizationControllerDelegate {
         // that the account doesn't exist, you can look in the keychain for the credentials and rerun setup
         
         // if (WebAPI.Login(credential.user, credential.identityToken, credential.authorizationCode)) {
-        //   ...
-        // }
-        self.signInSucceeded(true)
-    }
-    
-    private func signInWithUserAndPassword(credential: ASPasswordCredential) {
-        // You *should* have a fully registered account here.  If you get back an error from your server
-        // that the account doesn't exist, you can look in the keychain for the credentials and rerun setup
-        
-        // if (WebAPI.Login(credential.user, credential.password)) {
         //   ...
         // }
         self.signInSucceeded(true)
