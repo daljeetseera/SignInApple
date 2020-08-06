@@ -40,7 +40,7 @@ struct SecondView: View {
     
     func logout() {
         // Handle your session token here
-        self.presentationMode.wrappedValue.dismiss()
+    self.presentationMode.wrappedValue.dismiss()
     }
 }
 

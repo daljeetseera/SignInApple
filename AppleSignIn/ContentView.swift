@@ -49,17 +49,13 @@ struct ContentView: View {
                 
                 switch credential {
                 case .authorized:
-                    print("authorized for sign in")
                     self.actionState = 1
                 case .notFound:
-                    print("Access Not found")
-                    self.performExistingAccountSetupFlows()
+        self.performExistingAccountSetupFlows()
                 case .revoked:
-                    print("Access revoked")
-                    KeychainWrapper.shared.clearKeychain()
+            KeychainWrapper.shared.clearKeychain()
                 case .transferred:
-                    print("Access Transferred")
-                    KeychainWrapper.shared.clearKeychain()
+            KeychainWrapper.shared.clearKeychain()
                 default:
                     print("Apple sign in credential state unidentified")
                 }
@@ -100,7 +96,6 @@ struct ContentView: View {
         let controller = ASAuthorizationController(authorizationRequests: requests)
         controller.delegate = appleSignInDelegates
         controller.presentationContextProvider = appleSignInDelegates
-        
         controller.performRequests()
     }
 }
